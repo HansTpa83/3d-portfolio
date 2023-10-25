@@ -14,17 +14,16 @@ export default function Projects() {
             {
                 projects.map((project, index) => {
                     const { imagePreview } = jsonResume.meta.projects[project.name]
-                    console.log("IMG : ", imagePreview);
                     return (
-                        <div key={index}>
-                            <div style={{ width: "450px", height: "450px", backgroundImage: `url(${imagePreview})` }}></div>
-                            <div> {project.name} </div>
+                        <div key={index} style={{ margin: "90px auto", width: "450px", height: "auto", borderRadius: "20px", textAlign: "center", backgroundColor: "white" }}>
+                            <div style={{
+                                width: "450px", height: "450px", backgroundImage: `url(${imagePreview})`, borderTopRightRadius: "20px", borderTopLeftRadius: "20px"
+                            }}></div>
+                            < div style={{ fontSize: "3em" }}> {project.name} </div>
                         </div>
                     )
                 })
             }
-
-
-        </div>
+        </div >
     )
 }

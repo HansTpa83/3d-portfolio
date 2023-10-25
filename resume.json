@@ -1,0 +1,215 @@
+{
+    "basics": {
+        "name": "Hans Tapia",
+        "label": "Étudiant Pré-MSc cybersécurité Epitech Bordeaux | recherche alternance janvier 2024",
+        "image": "",
+        "email": "hanstapia83@gmail.com",
+        "phone": "",
+        "url": "",
+        "summary": "",
+        "location": {
+            "countryCode": "FR",
+            "address": ""
+        },
+        "profiles": [
+            {
+                "network": "LinkedIn",
+                "username": "hans-tapia",
+                "url": "https://www.linkedin.com/in/hans-tapia/"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "Pylote",
+            "position": "Développeur Full Stack",
+            "startDate": "2022-09-30",
+            "endDate": "2023-09-30",
+            "highlights": [],
+            "summary": "Back-end :\n    🔸Utilisation AWS (lambda, lightsails, dynamoDB)\n    🔸Création d'api\n    🔸Refactorisation de code\n    🔸Migration de base de données\n    🔸Bridge mail\n    🔸Express.js, Node.js, JavaScript\n\nFront-end :\n    🔸Feature front en typescript\n    🔸Extension chrome/firefox\n    🔸TypeScript, React.js, Redux.js",
+            "url": "https://www.linkedin.com/company/pylote-io/",
+            "location": "Paris"
+        },
+        {
+            "name": "SITE INFORMATIQUE",
+            "position": "Technicien Systèmes et Réseaux",
+            "startDate": "2021-09-30",
+            "endDate": "2021-10-31",
+            "highlights": [],
+            "summary": "🔸Découverte des différents métiers du numérique\n🔸Apprentissage ligne de commande",
+            "url": "https://www.linkedin.com/school/site-informatique/",
+            "location": "Bègles, Nouvelle-Aquitaine, France"
+        },
+        {
+            "name": "La Piscine Bordeaux",
+            "position": "Développeur web",
+            "startDate": "2020-01-31",
+            "endDate": "2020-01-31",
+            "highlights": [],
+            "summary": "🔸Apprentissage HTML\n🔸Apprentissage CSS\n🔸Apprentissage Bootstrap",
+            "url": "https://www.linkedin.com/company/lapiscinebdx/",
+            "location": "Mérignac, Nouvelle-Aquitaine, France"
+        }
+    ],
+    "volunteer": [],
+    "education": [
+        {
+            "institution": "EPITECH - European Institute of Technology",
+            "area": "",
+            "studyType": "Architecte système réseaux et sécurité",
+            "startDate": "2023-09-30",
+            "endDate": "2026-09-30",
+            "score": "",
+            "courses": []
+        },
+        {
+            "institution": "Web@cadémie by Epitech Bordeaux",
+            "area": "Informatique",
+            "studyType": "Intégrateur - Développeur Web",
+            "startDate": "2021-10-31",
+            "endDate": "2023-09-30",
+            "score": "",
+            "courses": []
+        }
+    ],
+    "awards": [],
+    "certificates": [],
+    "publications": [],
+    "skills": [
+        {
+            "name": "MySQL",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "MongoDB",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Redux.js",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Amazon DynamoDB",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Airtable",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "AWS Lambda",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Express.js",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Node.js",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "TypeScript",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "React.js",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "PHP",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "JavaScript",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "Feuilles de style en cascade (CSS)",
+            "level": "",
+            "keywords": []
+        },
+        {
+            "name": "HTML",
+            "level": "",
+            "keywords": []
+        }
+    ],
+    "languages": [
+        {
+            "language": "fr",
+            "fluency": "Native Speaker"
+        }
+    ],
+    "interests": [],
+    "references": [],
+    "projects": [
+        {
+            "name": "Template CV",
+            "startDate": "2019-01-01",
+            "endDate": "2021-01-01",
+            "description": "Description...",
+            "highlights": [],
+            "url": "https://project.com/"
+        },
+        {
+            "name": "Skribbl.io",
+            "startDate": "2019-01-01",
+            "endDate": "2021-01-01",
+            "description": "Description...",
+            "highlights": [],
+            "url": "https://project.com/"
+        },
+        {
+            "name": "Chat IRC",
+            "startDate": "2019-01-01",
+            "endDate": "2021-01-01",
+            "description": "Description...",
+            "highlights": [],
+            "url": "https://project.com/"
+        }
+    ],
+    "meta": {
+        "projects": {
+            "Template CV": {
+                "imagePreview": "/images/temp.png",
+                "images": [],
+                "technos": [
+                    "Handlebars",
+                    "JavaScript",
+                    "SCSS"
+                ]
+            },
+            "Skribbl.io": {
+                "imagePreview": "/images/temp2.png",
+                "images": [],
+                "technos": [
+                    "React",
+                    "Go",
+                    "Websocket"
+                ]
+            },
+            "Chat IRC": {
+                "imagePreview": "/images/temp.png",
+                "images": [],
+                "technos": [
+                    "React",
+                    "Go",
+                    "Websocket"
+                ]
+            }
+        }
+    }
+}

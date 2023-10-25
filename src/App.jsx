@@ -27,7 +27,7 @@ function App() {
 
   const { rotationY, rotationX, rotationZ, positions, distanceFactor } = useControls('Perspective cam', {
     distanceFactor: {
-      value: -.1, min: -180, max: 180, step: 0.01
+      value: 28, min: -180, max: 180, step: 0.01
     },
     rotationY: {
       value: 1.5, min: -180, max: 180, step: 0.01
@@ -40,9 +40,9 @@ function App() {
     },
     positions: {
       value: {
-        x: -.15,
-        y: 2.35,
-        z: -1.95
+        x: 12,
+        y: 3,
+        z: -3
       },
       max: 180,
       step: 0.01
@@ -52,15 +52,20 @@ function App() {
   return (
     <div className='App'>
       <Canvas>
-        <PerspectiveCamera ref={perspectiveCamRef} />
-        <OrbitControls makeDefault position={[positions.x, positions.y, positions.z]} />
+        <PerspectiveCamera makeDefault
+          ref={perspectiveCamRef}
+          position={[positions.x, positions.y, positions.z]}
+          fov={distanceFactor}
+        />
+        <OrbitControls enableZoom={false} />
         <Environment preset='city' />
         <color args={['#241a1a']} attach='background' />
-        {/* rotation={[rotationX, rotationY, rotationZ]}
-          position={[positions.x, positions.y, positions.z]} */}
-        <Phone snackbar={setSnackbar} />
-        <Office />
-        {/* <Computer /> */}
+
+        <group position={[0, -2, -1]}>
+          <Phone snackbar={setSnackbar} />
+          <Office />
+          <Computer />
+        </group>
       </Canvas>
       {/* <Navbar cameraPosition={handleClick} /> */}
       <Snackbar open={snackbar} autoHideDuration={3000} onClose={() => setSnackbar(false)}>

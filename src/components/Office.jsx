@@ -1,9 +1,9 @@
-import React, { forwardRef } from 'react'
-import { useAnimations, useGLTF } from '@react-three/drei'
+import React from 'react'
+import { useGLTF } from '@react-three/drei'
 
 
 export default function Office() {
-    const { scene } = useGLTF("/models/room.gltf")
+    const { scene } = useGLTF("/models/desk.gltf")
 
     return (
         <primitive object={scene} />

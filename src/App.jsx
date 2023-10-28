@@ -3,10 +3,11 @@ import { Environment, PerspectiveCamera, OrbitControls } from "@react-three/drei
 import { Canvas, useThree } from "@react-three/fiber"
 import { useControls } from 'leva'
 import { Snackbar, Alert } from '@mui/material'
-
+import * as THREE from 'three'
 
 import './style.scss'
 
+import CameraScene from './components/CameraScene'
 //MODELS 
 import Office from "./components/Office"
 import Computer from "./components/Computer"
@@ -14,20 +15,29 @@ import Navbar from "./components/Navbar"
 import Phone from './components/Phone'
 
 function App() {
-  const perspectiveCamRef = useRef()
+  const perspectiveCamRef = useRef(null)
   const [snackbar, setSnackbar] = useState(false)
 
 
   const handleClick = (infos) => {
-    perspectiveCamRef.current.position.set(infos.positions.x, infos.positions.y, infos.positions.z);
-    perspectiveCamRef.current.rotation.set(infos.rotations.x, infos.rotations.y, infos.rotations.z);
+    perspectiveCamRef.current.position.set(infos.positions.x, infos.positions.y, infos.positions.z)
 
-    perspectiveCamRef.current.updateMatrixWorld();
+    useFrame(() => {
+      const target = new THREE.Vector3(infos.rotations.x, infos.rotations.y, infos.rotations.z);
+      perspectiveCamRef.camera.lookAt(target)
+      perspectiveCamRef.camera.updateProjectionMatrix()
+    })
+    // perspectiveCamRef.current.rotation.set(0, 2.5, 0);
+
+    // perspectiveCamRef.current.updateMatrixWorld();
+    // perspectiveCamRef.current.updateProjectionMatrix();
+
+    console.log("perspectiveCamRef : ", perspectiveCamRef.current);
   }
 
   const { rotationY, rotationX, rotationZ, positions, distanceFactor } = useControls('Perspective cam', {
     distanceFactor: {
-      value: 28, min: -180, max: 180, step: 0.01
+      value: 75, min: -180, max: 180, step: 0.01
     },
     rotationY: {
       value: 1.5, min: -180, max: 180, step: 0.01
@@ -40,40 +50,51 @@ function App() {
     },
     positions: {
       value: {
-        x: 12,
-        y: 3,
+        x: 4,
+        y: 1.3,
         z: -3
       },
       max: 180,
       step: 0.01
     }
   })
-
   return (
-    <div className='App'>
-      <Canvas>
-        <PerspectiveCamera makeDefault
+    <div className='App' >
+      <Canvas
+      // camera={{
+      //   position: [4, 1.3, -3],
+      // }}
+      >
+        {/* <PerspectiveCamera
           ref={perspectiveCamRef}
+          makeDefault
           position={[positions.x, positions.y, positions.z]}
+          // rotation={[0, rotationY, 0]}
+          // quaternion={quaternion}
           fov={distanceFactor}
-        />
-        <OrbitControls enableZoom={false} />
+        /> */}
+        {/* <OrbitControls enableZoom={false} /> */}
+
+        <CameraScene />
+
         <Environment preset='city' />
         <color args={['#241a1a']} attach='background' />
 
-        <group position={[0, -2, -1]}>
-          <Phone snackbar={setSnackbar} />
-          <Office />
-          <Computer />
-        </group>
+        {/* <group position={[0, -2, -1]}> */}
+        <Phone snackbar={setSnackbar} />
+        <Office />
+        <Computer />
+        {/* </group> */}
+
       </Canvas>
-      {/* <Navbar cameraPosition={handleClick} /> */}
+
+      <Navbar cameraPosition={handleClick} />
       <Snackbar open={snackbar} autoHideDuration={3000} onClose={() => setSnackbar(false)}>
         <Alert onClose={() => setSnackbar(false)} severity="success" sx={{ width: '100%' }}>
           copier dans le presse papier
         </Alert>
       </Snackbar>
-    </div>
+    </div >
   )
 }
 

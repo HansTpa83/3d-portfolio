@@ -59,7 +59,7 @@ export default function CameraScene() {
             position: new THREE.Vector3(.4, 2.2, .05),
             target: new THREE.Vector3(0, 2.15, .05)
         },
-        default: {
+        home: {
             position: new THREE.Vector3(4, 3, -2.5),
             target: new THREE.Vector3(0, 2, 1.4)
         }

@@ -60,31 +60,15 @@ function App() {
   })
   return (
     <div className='App' >
-      <Canvas
-      // camera={{
-      //   position: [4, 1.3, -3],
-      // }}
-      >
-        {/* <PerspectiveCamera
-          ref={perspectiveCamRef}
-          makeDefault
-          position={[positions.x, positions.y, positions.z]}
-          // rotation={[0, rotationY, 0]}
-          // quaternion={quaternion}
-          fov={distanceFactor}
-        /> */}
-        {/* <OrbitControls enableZoom={false} /> */}
-
+      <Canvas camera={{ position: [2, 2, 2] }}>
         <CameraScene />
 
         <Environment preset='city' />
         <color args={['#241a1a']} attach='background' />
 
-        {/* <group position={[0, -2, -1]}> */}
         <Phone snackbar={setSnackbar} />
         <Office />
         <Computer />
-        {/* </group> */}
 
       </Canvas>
 

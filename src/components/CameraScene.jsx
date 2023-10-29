@@ -3,25 +3,67 @@ import * as THREE from 'three';
 import { useEffect, useRef } from 'react';
 import { useThree } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
+import { useCameraStore } from '../store/store';
 
 export default function CameraScene() {
     const { camera, gl } = useThree();
     const cameraControlsRef = useRef();
 
-    const contact = {
-        position: new THREE.Vector3(.82, 1.7, 1.45),
-        target: new THREE.Vector3(0, 1.5, 1.45)
-    };
-    const project = {
-        position: new THREE.Vector3(.4, 2.2, .05),
-        target: new THREE.Vector3(0, 2.15, .05)
+    const cameraName = useCameraStore((state) => state.cameraName);
+
+    const minPolarAngle = 0;
+    const maxPolarAngle = Math.PI / 2 - 0.15;
+    const minAzimuthAngle = Math.PI / 2;
+    const maxAzimuthAngle = Math.PI;
+
+    /**
+     * To permit animations of the camera
+     */
+    const cameraMovementsOn = () => {
+        cameraControlsRef.current.enabled = true;
+        cameraControlsRef.current.minPolarAngle = 0;
+        cameraControlsRef.current.maxPolarAngle = Math.PI;
+        cameraControlsRef.current.minAzimuthAngle = Infinity;
+        cameraControlsRef.current.maxAzimuthAngle = Infinity;
     };
 
-    const experiences = {
-        position: new THREE.Vector3(.4, 2.2, .05),
-        target: new THREE.Vector3(0, 2.15, .05)
+    /**
+     * User can control the camera
+     */
+    const cameraMovementsWithLimitations = () => {
+        cameraControlsRef.current.enabled = true;
+        cameraControlsRef.current.minPolarAngle = minPolarAngle;
+        cameraControlsRef.current.maxPolarAngle = maxPolarAngle;
+        cameraControlsRef.current.minAzimuthAngle = minAzimuthAngle;
+        cameraControlsRef.current.maxAzimuthAngle = maxAzimuthAngle;
     };
 
+    /**
+        * User can not control the camera
+         */
+    const cameraMovementsOff = () => {
+        cameraControlsRef.current.enabled = false;
+    };
+
+
+    const cameraSettings = {
+        contact: {
+            position: new THREE.Vector3(.82, 1.7, 1.45),
+            target: new THREE.Vector3(0, 1.5, 1.45)
+        },
+        project: {
+            position: new THREE.Vector3(.4, 2.2, .05),
+            target: new THREE.Vector3(0, 2.15, .05)
+        },
+        experiences: {
+            position: new THREE.Vector3(.4, 2.2, .05),
+            target: new THREE.Vector3(0, 2.15, .05)
+        },
+        default: {
+            position: new THREE.Vector3(4, 3, -2.5),
+            target: new THREE.Vector3(0, 2, 1.4)
+        }
+    }
 
     const animateCamera = (positionSettings, targetSettings, duration, ease) => {
         /**
@@ -60,17 +102,13 @@ export default function CameraScene() {
     };
 
     useEffect(() => {
-        // switch() {
-        //     case:
         animateCamera(
-            project.position,
-            project.target,
+            cameraSettings[cameraName].position,
+            cameraSettings[cameraName].target,
             2,
             'sine'
         );
-        // break;
-        // }
-    }, [])
+    }, [cameraName])
 
     return (
         <OrbitControls

@@ -64,8 +64,8 @@ export default function CameraScene() {
             target: new THREE.Vector3(0, 2.15, .05)
         },
         experiences: {
-            position: new THREE.Vector3(.4, 2.2, .05),
-            target: new THREE.Vector3(0, 2.15, .05)
+            position: new THREE.Vector3(-1.3, 3.25, -.47),
+            target: new THREE.Vector3(-2, 3.25, -.47)
         },
         presentation: {
             position: new THREE.Vector3(-.15, 1.8, -1.1),

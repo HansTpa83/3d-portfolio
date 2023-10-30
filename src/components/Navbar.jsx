@@ -9,7 +9,7 @@ export default function Navbar() {
 
     const steps = [
         'home',
-        // 'presentation',
+        'presentation',
         'projects',
         'educations',
         'experiences',

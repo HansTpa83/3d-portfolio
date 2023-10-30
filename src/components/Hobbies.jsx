@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei'
 import { pointerCursor, normalCursor } from "../utils.js"
 
 export default function Hobbies() {
-    const { scene } = useGLTF("/models/hobbies.gltf")
+    const { scene } = useGLTF("/models/hobbies-v1.glb")
 
     return (
         <primitive object={scene} onPointerEnter={pointerCursor} onPointerLeave={normalCursor} />

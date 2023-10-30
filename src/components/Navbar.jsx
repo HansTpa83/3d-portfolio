@@ -3,15 +3,15 @@ import { useCameraStore } from "../store/store"
 import React, { useState, useEffect } from 'react'
 import { MdHome, MdOutlineHome, MdNavigateNext, MdNavigateBefore } from 'react-icons/md';
 
-export default function Navbar(props) {
+export default function Navbar() {
     const camera = useCameraStore(state => state.cameraName)
     const switchCamera = useCameraStore((state) => state.switchCamera)
 
     const steps = [
         'home',
         // 'presentation',
-        'project',
-        // 'education',
+        'projects',
+        'educations',
         'experiences',
         'hobbies',
         'contact'
@@ -21,9 +21,10 @@ export default function Navbar(props) {
 
     const stepTranslation = {
         'home': "Accueil",
-        'project': "Projets",
+        'projects': "Projets",
         'contact': "Contact",
         'hobbies': "Hobbies",
+        'educations': "Educations",
         'education': "Formation",
         'experiences': "Expérience",
         'presentation': "Présentation"

@@ -8,11 +8,13 @@ import * as THREE from 'three'
 import './style.scss'
 
 import CameraScene from './components/CameraScene'
+
 //MODELS 
 import Office from "./components/Office"
 import Computer from "./components/Computer"
 import Navbar from "./components/Navbar"
 import Phone from './components/Phone'
+import Cv from './components/Cv'
 
 function App() {
   const perspectiveCamRef = useRef(null)
@@ -69,7 +71,7 @@ function App() {
         <Phone snackbar={setSnackbar} />
         <Office />
         <Computer />
-
+        <Cv />
       </Canvas>
 
       <Navbar cameraPosition={handleClick} />

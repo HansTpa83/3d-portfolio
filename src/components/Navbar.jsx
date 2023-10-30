@@ -13,6 +13,7 @@ export default function Navbar(props) {
         'project',
         // 'education',
         'experiences',
+        'hobbies',
         'contact'
     ]
 
@@ -20,11 +21,12 @@ export default function Navbar(props) {
 
     const stepTranslation = {
         'home': "Accueil",
-        'presentation': "Présentation",
         'project': "Projets",
+        'contact': "Contact",
+        'hobbies': "Hobbies",
         'education': "Formation",
         'experiences': "Expérience",
-        'contact': "Contact"
+        'presentation': "Présentation"
     }
 
     const handleClick = (type) => {

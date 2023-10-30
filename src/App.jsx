@@ -15,6 +15,7 @@ import Computer from "./components/Computer"
 import Navbar from "./components/Navbar"
 import Phone from './components/Phone'
 import Cv from './components/Cv'
+import Hobbies from './components/Hobbies'
 
 function App() {
   const perspectiveCamRef = useRef(null)
@@ -72,6 +73,7 @@ function App() {
         <Office />
         <Computer />
         <Cv />
+        <Hobbies />
       </Canvas>
 
       <Navbar cameraPosition={handleClick} />

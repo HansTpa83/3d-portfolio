@@ -24,8 +24,7 @@ export default function Navbar() {
         'projects': "Projets",
         'contact': "Contact",
         'hobbies': "Hobbies",
-        'educations': "Educations",
-        'education': "Formation",
+        'educations': "Formations",
         'experiences': "Expérience",
         'presentation': "Présentation"
     }

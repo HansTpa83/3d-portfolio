@@ -47,6 +47,10 @@ export default function CameraScene() {
 
 
     const cameraSettings = {
+        hobbies: {
+            position: new THREE.Vector3(1.5, 3.5, 1),
+            target: new THREE.Vector3(1, -2, 10)
+        },
         contact: {
             position: new THREE.Vector3(.82, 1.7, 1.45),
             target: new THREE.Vector3(0, 1.5, 1.45)

@@ -1,12 +1,10 @@
-import React, { useRef, useState, useEffect } from 'react'
-import { Environment, PerspectiveCamera, OrbitControls } from "@react-three/drei"
-import { Canvas, useThree } from "@react-three/fiber"
-import { useControls } from 'leva'
+import React, { useState, Suspense } from 'react'
+import { Environment } from "@react-three/drei"
+import { Canvas } from "@react-three/fiber"
 import { Snackbar, Alert } from '@mui/material'
-import * as THREE from 'three'
-
 import './style.scss'
 
+import Loading from './page/Loading'
 import CameraScene from './components/CameraScene'
 
 //MODELS 
@@ -25,18 +23,20 @@ function App() {
   return (
     <div className='App' >
       <Canvas camera={{ position: [2, 2, 2] }}>
-        <CameraScene />
+        <Suspense fallback={<Loading />}>
+          <CameraScene />
 
-        <Environment preset='city' />
-        <color args={['#241a1a']} attach='background' />
+          <Environment preset='city' />
+          <color args={['#241a1a']} attach='background' />
 
-        <Phone snackbar={setSnackbar} />
-        <Office />
-        <Computer />
-        <Cv />
-        <Hobbies />
-        <Educations />
-        <Notebook />
+          <Phone snackbar={setSnackbar} />
+          <Office />
+          <Computer />
+          <Cv />
+          <Hobbies />
+          <Educations />
+          <Notebook />
+        </Suspense>
       </Canvas>
 
       <Navbar />

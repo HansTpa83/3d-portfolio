@@ -1,0 +1,131 @@
+:root {
+    --bgc: rgb(43, 41, 41)
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--bgc);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 15px;
+    position: relative;
+    width: 500px;
+    height: 80px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+nav ul li {
+    position: relative;
+    list-style: none;
+    width: 80px;
+    z-index: 1;
+}
+
+ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+}
+
+.fa {
+    position: relative;
+    display: block;
+    line-height: 80px;
+    font-size: 30px;
+    transition: 0.4s;
+    color: black;
+    text-align: center;
+}
+
+ul li.active a .fa {
+    transform: translateY(-40px);
+    color: black;
+}
+
+ul li.active a .title {
+    opacity: 1;
+    transform: translateY(13px);
+}
+
+.title {
+    position: absolute;
+    font-weight: 600;
+    font-size: 18px;
+    color: black;
+    opacity: 0;
+    transition: 0.4s;
+    transform: translateY(10px);
+}
+
+.selected-option-bg {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: -50%;
+    border-radius: 50%;
+    background: linear-gradient(115deg, yellow, orange);
+    transition: 0.4s;
+    border: 5px solid var(--bgc);
+}
+
+.selected-option-bg::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -18px;
+    width: 15px;
+    height: 19px;
+    background-color: white;
+    border-top-right-radius: 20px;
+    box-shadow: 0px -8px 0 0 var(--bgc);
+}
+
+.selected-option-bg::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    width: 15px;
+    height: 19px;
+    background-color: white;
+    border-top-left-radius: 20px;
+    box-shadow: 0px -8px 0 0 var(--bgc);
+}
+
+ul li:nth-child(1).active~.selected-option-bg {
+    transform: translateX(calc(80px * 0));
+}
+
+ul li:nth-child(2).active~.selected-option-bg {
+    transform: translateX(calc(80px * 1));
+}
+
+ul li:nth-child(3).active~.selected-option-bg {
+    transform: translateX(calc(80px * 2));
+}
+
+ul li:nth-child(4).active~.selected-option-bg {
+    transform: translateX(calc(80px * 3));
+}
+
+ul li:nth-child(5).active~.selected-option-bg {
+    transform: translateX(calc(80px * 4));
+}

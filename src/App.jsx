@@ -16,7 +16,7 @@ import Cv from './components/Cv'
 import Hobbies from './components/Hobbies'
 import Educations from './components/Educations'
 import Notebook from './components/Notebook'
-import Experiences from './components/Experiences'
+import Dashboard from './components/Dashboard'
 
 function App() {
   const [snackbar, setSnackbar] = useState(false)
@@ -37,7 +37,7 @@ function App() {
           <Hobbies />
           <Educations />
           <Notebook />
-          <Experiences />
+          <Dashboard />
         </Suspense>
       </Canvas>
 

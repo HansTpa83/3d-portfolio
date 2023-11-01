@@ -2,10 +2,19 @@ import { create } from 'zustand';
 
 export const useCameraStore = create((set) => ({
     cameraName: 'home',
-    switchCamera(cam) {
+    isCameraMoving: false,
+    switchCamera: (cam) => {
         set((state) => {
             return {
+                isCameraMoving: true,
                 cameraName: cam
+            }
+        })
+    },
+    cameraNotMoving: () => { // Utilisez une fonction pour cameraNotMoving
+        set((state) => {
+            return {
+                isCameraMoving: false,
             }
         })
     }

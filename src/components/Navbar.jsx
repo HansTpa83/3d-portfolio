@@ -11,8 +11,8 @@ export default function Navbar() {
         'home',
         'presentation',
         'projects',
-        'educations',
         'experiences',
+        'educations',
         'hobbies',
         'contact'
     ]

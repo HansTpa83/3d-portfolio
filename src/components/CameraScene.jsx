@@ -10,6 +10,7 @@ export default function CameraScene() {
     const cameraControlsRef = useRef();
 
     const cameraName = useCameraStore((state) => state.cameraName);
+    const cameraNotMoving = useCameraStore(state => state.cameraNotMoving)
 
     const minPolarAngle = 0;
     const maxPolarAngle = Math.PI / 2 - 0.15;
@@ -120,6 +121,11 @@ export default function CameraScene() {
             2,
             'sine'
         );
+        setTimeout(() => {
+            cameraNotMoving()
+
+        }, 2000);
+
     }, [cameraName])
 
     return (

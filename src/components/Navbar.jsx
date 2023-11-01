@@ -11,8 +11,8 @@ export default function Navbar() {
         'home',
         'presentation',
         'projects',
-        'educations',
         'experiences',
+        'educations',
         'hobbies',
         'contact'
     ]
@@ -25,7 +25,7 @@ export default function Navbar() {
         'contact': "Contact",
         'hobbies': "Hobbies",
         'educations': "Formations",
-        'experiences': "Expérience",
+        'experiences': "Expériences",
         'presentation': "Présentation"
     }
 

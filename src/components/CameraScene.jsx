@@ -10,6 +10,7 @@ export default function CameraScene() {
     const cameraControlsRef = useRef();
 
     const cameraName = useCameraStore((state) => state.cameraName);
+    const cameraNotMoving = useCameraStore(state => state.cameraNotMoving)
 
     const minPolarAngle = 0;
     const maxPolarAngle = Math.PI / 2 - 0.15;
@@ -64,8 +65,8 @@ export default function CameraScene() {
             target: new THREE.Vector3(0, 2.15, .05)
         },
         experiences: {
-            position: new THREE.Vector3(.4, 2.2, .05),
-            target: new THREE.Vector3(0, 2.15, .05)
+            position: new THREE.Vector3(-1.3, 3.25, -.47),
+            target: new THREE.Vector3(-2, 3.25, -.47)
         },
         presentation: {
             position: new THREE.Vector3(-.15, 1.8, -1.1),
@@ -97,7 +98,8 @@ export default function CameraScene() {
                 cameraMovementsOn();
             },
             onComplete: () => {
-                cameraMovementsOff();
+                cameraName == "home" ? cameraMovementsWithLimitations() : cameraMovementsOff();
+                cameraNotMoving()
             }
         });
 
@@ -130,7 +132,6 @@ export default function CameraScene() {
             rotateSpeed={0.2}
             zoomSpeed={2}
             enablePan={false}
-            enableZoom={false}
         // maxDistance={isBrowser ? 7.3 : 15}
         />
     );

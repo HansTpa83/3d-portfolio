@@ -6,6 +6,6 @@ export default function Hobbies() {
     const { scene } = useGLTF("/models/hobbies-v1.glb")
 
     return (
-        <primitive object={scene} onPointerEnter={pointerCursor} onPointerLeave={normalCursor} />
+        <primitive object={scene} position={[0, 0, .54]} />
     )
 }

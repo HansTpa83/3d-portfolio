@@ -17,6 +17,7 @@ import Hobbies from './components/Hobbies'
 import Educations from './components/Educations'
 import Notebook from './components/Notebook'
 import Dashboard from './components/Dashboard'
+import Room from './components/Room'
 
 function App() {
   const [snackbar, setSnackbar] = useState(false)
@@ -38,6 +39,7 @@ function App() {
           <Educations />
           <Notebook />
           <Dashboard />
+          <Room />
         </Suspense>
       </Canvas>
 

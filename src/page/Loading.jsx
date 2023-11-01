@@ -15,7 +15,6 @@ export default function Loading() {
     };
 
     const fillBarStyles = {
-        width: `${progress}%`,
         height: '100%',
         width: '60%',
         backgroundColor: 'white',

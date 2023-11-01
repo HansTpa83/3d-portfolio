@@ -138,43 +138,26 @@
     "references": [],
     "projects": [
         {
-            "name": "Template CV",
-            "startDate": "2019-01-01",
-            "endDate": "2021-01-01",
-            "description": "Description...",
-            "highlights": [],
-            "url": "https://project.com/"
-        },
-        {
             "name": "Skribbl.io",
             "startDate": "2019-01-01",
             "endDate": "2021-01-01",
-            "description": "Description...",
+            "description": "Skribbl.io était un projet d'école. Un mot est donné au dessinateur, qui doit le représenter visuellement, tandis que les autres joueurs tentent de deviner ce mot via un chat.  ",
             "highlights": [],
-            "url": "https://project.com/"
+            "url": ""
         },
         {
             "name": "Chat IRC",
-            "startDate": "2019-01-01",
+            "startDate": "2021-01-01",
             "endDate": "2021-01-01",
-            "description": "Description...",
+            "description": "Le projet d'école consistait à mettre en place un chat IRC. L'objectif principal était de permettre aux utilisateurs de créer des salles de discussion et d'échanger des messages en temps réel en utilisant des websockets",
             "highlights": [],
-            "url": "https://project.com/"
+            "url": ""
         }
     ],
     "meta": {
         "projects": {
-            "Template CV": {
-                "imagePreview": "/images/temp.png",
-                "images": [],
-                "technos": [
-                    "Handlebars",
-                    "JavaScript",
-                    "SCSS"
-                ]
-            },
             "Skribbl.io": {
-                "imagePreview": "/images/temp2.png",
+                "imagePreview": "/images/skribbl.png",
                 "images": [],
                 "technos": [
                     "React",
@@ -183,11 +166,10 @@
                 ]
             },
             "Chat IRC": {
-                "imagePreview": "/images/temp.png",
+                "imagePreview": "/images/chat_irc.png",
                 "images": [],
                 "technos": [
                     "React",
-                    "Go",
                     "Websocket"
                 ]
             }

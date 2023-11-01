@@ -1,0 +1,85 @@
+$light_green: #E9F1CF;
+$dark_green: #1A7347;
+
+@font-face {
+    font-family: digit;
+    src: url("/fonts/Millennium-Bold.ttf");
+}
+
+.Projects {
+    width: 915px;
+    height: 724px;
+    overflow: auto;
+    color: $dark_green;
+    font-family: "digit";
+    background-color: darken($color: $light_green, $amount: 10);
+}
+
+.imageContainer {
+    width: 450px;
+    height: 350px;
+    max-height: 450px;
+    max-height: 450px;
+    border-radius: 10px;
+    border: $dark_green 5px solid;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.project {
+    width: 90%;
+    padding: 0 5%;
+    height: auto;
+    display: flex;
+    text-align: left;
+    border-radius: 20px;
+    margin-top: 45px;
+    margin-bottom: 90px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.technos {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.project span {
+    &.right {
+        -webkit-clip-path: polygon(100% 0, 86% 100%, 0 100%, 0 0);
+        clip-path: polygon(100% 0, 86% 100%, 0 100%, 0 0);
+        padding: 5px 15px 5px 5px;
+        text-align: left;
+    }
+
+    &.left {
+        -webkit-clip-path: polygon(0 0, 14% 100%, 100% 100%, 100% 0);
+        clip-path: polygon(0 0, 14% 100%, 100% 100%, 100% 0);
+        padding: 5px 5px 5px 15px;
+        text-align: right;
+    }
+
+    background-color: $dark_green;
+    color: $light_green;
+    margin: 0 2.5px;
+}
+
+.rightSide {
+    margin-right: 20px;
+}
+
+.description {
+    margin-top: 20px;
+    font-size: 1.2em;
+    max-width: 400px;
+}
+
+.Projects::-webkit-scrollbar {
+    width: 10px;
+    background-color: darken($color: $light_green, $amount: 10);
+}
+
+.Projects::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $dark_green;
+}

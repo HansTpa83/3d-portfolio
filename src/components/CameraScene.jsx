@@ -98,7 +98,8 @@ export default function CameraScene() {
                 cameraMovementsOn();
             },
             onComplete: () => {
-                cameraMovementsOff();
+                cameraName == "home" ? cameraMovementsWithLimitations() : cameraMovementsOff();
+                cameraNotMoving()
             }
         });
 
@@ -121,11 +122,6 @@ export default function CameraScene() {
             2,
             'sine'
         );
-        setTimeout(() => {
-            cameraNotMoving()
-
-        }, 2000);
-
     }, [cameraName])
 
     return (
@@ -136,7 +132,6 @@ export default function CameraScene() {
             rotateSpeed={0.2}
             zoomSpeed={2}
             enablePan={false}
-            enableZoom={false}
         // maxDistance={isBrowser ? 7.3 : 15}
         />
     );

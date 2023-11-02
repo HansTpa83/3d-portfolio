@@ -8,14 +8,14 @@ export const companyName = (companyName) => {
 
 export const position = (position) => {
     const positions = position.split(",")
+    console.log(positions);
     return (
         <div className='experiencesContent'>
             {positions.map((position, index) => {
                 return (
-                    <React.Fragment key={index}>
+                    <div key={index}>
                         {position}
-                        <br />
-                    </React.Fragment>
+                    </div>
                 )
             })}
         </div>
@@ -28,13 +28,12 @@ export const date = (dateString) => {
         <div className='experiencesContent'>
             {date.map((date, index) => {
                 return (
-                    <React.Fragment key={index}>
+                    <div key={index}>
                         {date}
-                        <br />
-                    </React.Fragment>
+                    </div>
                 )
             })}
-        </div>
+        </div >
     )
 }
 

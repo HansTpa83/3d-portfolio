@@ -4,8 +4,15 @@
 }
 
 .experiencesContent {
+    font-size: 1.45em;
     text-align: center;
     line-height: 1.2em;
-    max-width: 100px;
     font-family: "HomemadeApple";
+    white-space: nowrap;
+
+    h2 {
+        width: 100%;
+        font-size: 1.8em;
+    }
+
 }

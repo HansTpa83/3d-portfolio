@@ -98,7 +98,16 @@ export default function CameraScene() {
                 cameraMovementsOn();
             },
             onComplete: () => {
-                cameraName == "home" ? cameraMovementsWithLimitations() : cameraMovementsOff();
+                if (cameraName == "home") {
+                    cameraMovementsWithLimitations()
+                } else if (cameraName == "projects") {
+                    cameraMovementsOff()
+                    cameraControlsRef.current.enableZoom = false;
+
+                } else {
+                    cameraMovementsOff()
+                }
+
                 cameraNotMoving()
             }
         });

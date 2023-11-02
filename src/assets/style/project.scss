@@ -37,6 +37,9 @@ $dark_green: #1A7347;
     margin-bottom: 90px;
     justify-content: space-between;
     align-items: center;
+
+    scrollbar-width: thin;
+    scrollbar-color: $dark_green $light_green;
 }
 
 .technos {

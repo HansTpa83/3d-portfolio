@@ -2,9 +2,13 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Room() {
-    const { scene } = useGLTF("/models/room.gltf")
+    const { scene: roomScene } = useGLTF("/models/room.gltf")
+    const { scene: chairScene } = useGLTF("/models/chair.gltf")
 
     return (
-        <primitive object={scene} />
+        <>
+            <primitive object={roomScene} />
+            <primitive object={chairScene} />
+        </>
     )
 }

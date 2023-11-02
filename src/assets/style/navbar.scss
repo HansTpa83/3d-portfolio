@@ -1,131 +1,74 @@
-:root {
-    --bgc: rgb(43, 41, 41)
+#interface {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    color: #333;
 }
 
-body {
+.controls-wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.home-button {
+    width: 3.25rem;
+    height: 3.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: var(--bgc);
+    margin-right: 1rem;
+    border: none;
+    border-radius: 99%;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    pointer-events: all;
+    font-size: 1.25rem;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    border-radius: 15px;
-    position: relative;
-    width: 500px;
-    height: 80px;
-}
-
-nav ul {
+.interface-controls {
+    height: 3.25rem;
     display: flex;
     justify-content: space-between;
-    width: 400px;
+    border-radius: 30px;
+
+    /* glass effect */
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    pointer-events: all;
 }
 
-nav ul li {
-    position: relative;
-    list-style: none;
-    width: 80px;
-    z-index: 1;
-}
-
-ul li a {
+.interface-controls button {
+    background-color: transparent;
+    width: 3.25rem;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
-    text-decoration: none;
-    position: relative;
-    width: 100%;
+    border: none;
+    border-radius: 99%;
+    cursor: pointer;
+    font-size: 1.75rem;
+    font-weight: 700;
+    transition: 0.2s ease;
 }
 
-.fa {
-    position: relative;
-    display: block;
-    line-height: 80px;
-    font-size: 30px;
-    transition: 0.4s;
-    color: black;
-    text-align: center;
+.interface-controls button:disabled {
+    transition: 0.2s ease;
 }
 
-ul li.active a .fa {
-    transform: translateY(-40px);
-    color: black;
-}
-
-ul li.active a .title {
-    opacity: 1;
-    transform: translateY(13px);
-}
-
-.title {
-    position: absolute;
-    font-weight: 600;
-    font-size: 18px;
-    color: black;
-    opacity: 0;
-    transition: 0.4s;
-    transform: translateY(10px);
-}
-
-.selected-option-bg {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    top: -50%;
-    border-radius: 50%;
-    background: linear-gradient(115deg, yellow, orange);
-    transition: 0.4s;
-    border: 5px solid var(--bgc);
-}
-
-.selected-option-bg::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -18px;
-    width: 15px;
-    height: 19px;
-    background-color: white;
-    border-top-right-radius: 20px;
-    box-shadow: 0px -8px 0 0 var(--bgc);
-}
-
-.selected-option-bg::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: -18px;
-    width: 15px;
-    height: 19px;
-    background-color: white;
-    border-top-left-radius: 20px;
-    box-shadow: 0px -8px 0 0 var(--bgc);
-}
-
-ul li:nth-child(1).active~.selected-option-bg {
-    transform: translateX(calc(80px * 0));
-}
-
-ul li:nth-child(2).active~.selected-option-bg {
-    transform: translateX(calc(80px * 1));
-}
-
-ul li:nth-child(3).active~.selected-option-bg {
-    transform: translateX(calc(80px * 2));
-}
-
-ul li:nth-child(4).active~.selected-option-bg {
-    transform: translateX(calc(80px * 3));
-}
-
-ul li:nth-child(5).active~.selected-option-bg {
-    transform: translateX(calc(80px * 4));
+.step {
+    min-width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
 }

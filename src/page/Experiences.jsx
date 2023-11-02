@@ -8,7 +8,6 @@ export const companyName = (companyName) => {
 
 export const position = (position) => {
     const positions = position.split(",")
-    console.log(positions);
     return (
         <div className='experiencesContent position'>
             {positions.map((position, index) => {

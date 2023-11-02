@@ -3,6 +3,8 @@ import { useCameraStore } from "../store/store"
 import React, { useState, useEffect } from 'react'
 import { MdHome, MdOutlineHome, MdNavigateNext, MdNavigateBefore } from 'react-icons/md';
 
+import "../assets/style/navbar.scss"
+
 export default function Navbar() {
     const camera = useCameraStore(state => state.cameraName)
     const switchCamera = useCameraStore((state) => state.switchCamera)
@@ -39,17 +41,21 @@ export default function Navbar() {
     }
 
     return (
-        <div className='interface-controls' style={{ backgroundColor: "orange", position: 'absolute', bottom: '10px', right: "50%", display: 'flex', width: "10rem", borderRadius: "10px", height: "4vh", alignItems: 'center' }}>
-            <button onClick={() => handleClick("previous")}>
-                <MdNavigateBefore />
-            </button >
-            <div style={{ width: '10rem', textAlign: "center" }}>
-                {stepTranslation[steps[activeStep]]}
-            </div>
-            <button onClick={() => handleClick("next")} >
-                <MdNavigateNext />
-            </button>
-        </div>
+        <div id="interface" className="fonted">
+            <div className="controls-wrapper">
+                <div className='interface-controls'>
+                    <button style={{ borderRight: "1px solid black" }} onClick={() => handleClick("previous")}>
+                        <MdNavigateBefore />
+                    </button >
 
+                    <div className='step'>
+                        {stepTranslation[steps[activeStep]]}
+                    </div>
+                    <button style={{ borderLeft: "1px solid black" }} onClick={() => handleClick("next")} >
+                        <MdNavigateNext />
+                    </button>
+                </div>
+            </div>
+        </div>
     )
 }

@@ -49,8 +49,8 @@ export default function CameraScene() {
 
     const cameraSettings = {
         educations: {
-            position: new THREE.Vector3(-1.9, 3.5, 1.9),
-            target: new THREE.Vector3(-1.9, 2, 10)
+            position: new THREE.Vector3(-1.9, 3.15, 3.7),
+            target: new THREE.Vector3(-1.9, 3.15, 10)
         },
         hobbies: {
             position: new THREE.Vector3(1.5, 3.5, 1),
@@ -98,7 +98,12 @@ export default function CameraScene() {
                 cameraMovementsOn();
             },
             onComplete: () => {
-                cameraName == "home" ? cameraMovementsWithLimitations() : cameraMovementsOff();
+                if (cameraName === "home") {
+                    cameraMovementsWithLimitations()
+                } else {
+                    cameraMovementsOff()
+                }
+
                 cameraNotMoving()
             }
         });

@@ -39,7 +39,7 @@ export default function Dashboard() {
 
             <primitive object={bluePostIt} position={[0.01, 0.25, 1.8]}>
                 {camera === "experiences" && !cameraMoving &&
-                    <Html position={[-5.5, 4.77, -.7]}>
+                    <Html position={[-5.5, 4.77, -.73]}>
                         {position(resume.work[0].position)}
                     </Html>
                 }

@@ -60,7 +60,7 @@ canvas {
     height: 100vh;
     width: 50vw;
     cursor: default;
-    touch-action: none !important;
+    touch-action: auto !important;
 }
 
 ::-webkit-scrollbar {

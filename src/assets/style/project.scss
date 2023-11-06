@@ -1,5 +1,11 @@
-$light_green: #E9F1CF;
-$dark_green: #1A7347;
+$light: #2c2c2c;
+$dark: #dedede;
+
+.Projects a {
+    color: cornflowerblue;
+    margin-top: 1em;
+    display: block;
+}
 
 @font-face {
     font-family: digit;
@@ -10,9 +16,9 @@ $dark_green: #1A7347;
     width: 915px;
     height: 724px;
     overflow: auto;
-    color: $dark_green;
+    color: $dark;
     font-family: "digit";
-    background-color: darken($color: $light_green, $amount: 10);
+    background-color: $light;
 }
 
 .imageContainer {
@@ -21,7 +27,7 @@ $dark_green: #1A7347;
     max-height: 450px;
     max-height: 450px;
     border-radius: 10px;
-    border: $dark_green 5px solid;
+    border: $dark 5px solid;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -39,7 +45,7 @@ $dark_green: #1A7347;
     align-items: center;
 
     scrollbar-width: thin;
-    scrollbar-color: $dark_green $light_green;
+    scrollbar-color: $dark $light;
 }
 
 .technos {
@@ -62,8 +68,8 @@ $dark_green: #1A7347;
         text-align: right;
     }
 
-    background-color: $dark_green;
-    color: $light_green;
+    background-color: $dark;
+    color: $light;
     margin: 0 2.5px;
 }
 
@@ -79,10 +85,10 @@ $dark_green: #1A7347;
 
 .Projects::-webkit-scrollbar {
     width: 10px;
-    background-color: darken($color: $light_green, $amount: 10);
+    background-color: darken($color: $light, $amount: 10);
 }
 
 .Projects::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: $dark_green;
+    background-color: $dark;
 }

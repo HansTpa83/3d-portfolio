@@ -27,8 +27,10 @@ export default function Projects() {
                                     }
                                 </div>
                                 <div className='description'>{project.description}</div>
+                                <a target="_blank" href={project.url}>{project.url}</a>
                             </div>
                             <div className='imageContainer' style={{ backgroundImage: `url(${imagePreview})` }}></div>
+
                         </div>
                     ) :
                         (
@@ -46,6 +48,7 @@ export default function Projects() {
                                         }
                                     </div>
                                     <div className='description'>{project.description}</div>
+                                    <a target="_blank" href={project.url}>{project.url}</a>
                                 </div>
                             </div>
                         )

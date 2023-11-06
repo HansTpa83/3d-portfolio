@@ -143,7 +143,7 @@
             "endDate": "2021-01-01",
             "description": "Skribbl.io était un projet d'école. Un mot est donné au dessinateur, qui doit le représenter visuellement, tandis que les autres joueurs tentent de deviner ce mot via un chat.  ",
             "highlights": [],
-            "url": ""
+            "url": "https://github.com/HansTpa83/skribbl.io"
         },
         {
             "name": "Chat IRC",
@@ -151,7 +151,7 @@
             "endDate": "2021-01-01",
             "description": "Le projet d'école consistait à mettre en place un chat IRC. L'objectif principal était de permettre aux utilisateurs de créer des salles de discussion et d'échanger des messages en temps réel en utilisant des websockets",
             "highlights": [],
-            "url": ""
+            "url": "https://github.com/HansTpa83/IRC_chat"
         }
     ],
     "meta": {

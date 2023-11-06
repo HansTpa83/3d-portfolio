@@ -17,19 +17,17 @@ export default function Computer() {
 
     return (
         <primitive object={scene} >
-            {camera === "projects" && !cameraMoving &&
-                <Html
-                    ref={html}
-                    transform
-                    wrapperClass="htmlScreen"
-                    distanceFactor={.27}
-                    position={[-.04, 2.196, .055]}
-                    quaternion={quaternion}
-                >
-                    <Projects />
-                </Html>
+            <Html
+                ref={html}
+                transform
+                wrapperClass="htmlScreen"
+                distanceFactor={.27}
+                position={[-.04, 2.196, .055]}
+                quaternion={quaternion}
+            >
+                <Projects />
+            </Html>
 
-            }
         </primitive>
     )
 }

@@ -13,7 +13,7 @@ export default function Computer() {
     const cameraMoving = useCameraStore(state => state.isCameraMoving)
 
     const quaternion = new THREE.Quaternion()
-    quaternion.setFromAxisAngle(new THREE.Vector3(-.1, 2, .1).normalize(), Math.PI / 2)
+    quaternion.setFromAxisAngle(new THREE.Vector3(-.1, 2.2, .1).normalize(), Math.PI / 2)
 
     return (
         <primitive object={scene} >
@@ -22,7 +22,7 @@ export default function Computer() {
                 transform
                 wrapperClass="htmlScreen"
                 distanceFactor={.27}
-                position={[-.04, 2.196, .055]}
+                position={[-.04, 2.197, .052]}
                 quaternion={quaternion}
             >
                 <Projects />

@@ -138,6 +138,14 @@
     "references": [],
     "projects": [
         {
+            "name": "Elden slug",
+            "startDate": "",
+            "endDate": "",
+            "description": "Eleden Slug est un jeu 2D dynamique et palpitant conçu et développé dans le cadre de mon projet d'école. Inspiré du célèbre Metal Slug, le jeu a été fait en java avec libGDX",
+            "highlights": [],
+            "url": "https://github.com/HansTpa83/Jeu-2d"
+        },
+        {
             "name": "Skribbl.io",
             "startDate": "2019-01-01",
             "endDate": "2021-01-01",
@@ -156,6 +164,14 @@
     ],
     "meta": {
         "projects": {
+            "Elden slug": {
+                "imagePreview": "/images/elden_slug.png",
+                "images": [],
+                "technos": [
+                    "Java",
+                    "libGDX"
+                ]
+            },
             "Skribbl.io": {
                 "imagePreview": "/images/skribbl.png",
                 "images": [],

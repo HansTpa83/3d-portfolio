@@ -1,6 +1,12 @@
 $light: #2c2c2c;
 $dark: #dedede;
 
+@font-face {
+    font-family: digit;
+    src: url("/fonts/Millennium-Bold.ttf");
+}
+
+
 .divLink,
 .Projects a {
     color: cornflowerblue;
@@ -11,11 +17,6 @@ $dark: #dedede;
 
 ul {
     margin: 0;
-}
-
-@font-face {
-    font-family: digit;
-    src: url("/fonts/Millennium-Bold.ttf");
 }
 
 .Projects {
